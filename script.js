@@ -54,5 +54,14 @@ function test() {
     fortuneTeller(name); // Call the function
 }
 
+function dateDiff() {
+    let startDate = new Date(document.getElementById("start_date").value);
+    let endDate = new Date(document.getElementById("end_date").value);
 
+    let diff = (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24; // ms -> days
 
+    console.log(`Start Date: ${startDate}; End Date: ${endDate}`);
+
+    document.getElementById("dateDiff").innerText = `${diff} days between those two dates.`;
+
+}
